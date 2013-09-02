@@ -1,0 +1,18 @@
+# hidden/temp files
+.DS_Store
+*.swp
+*~.nib
+ 
+# Build dir
+DerivedData/
+ 
+# Xcode project files except for the project file
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+ 
+# Windows image thumbnail file
+Thumbs.db
+ 
+# User-specific project settings
+*.mode1v3
+*.mode2v3

@@ -1,0 +1,540 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6B2141961600548C00647710 /* libY.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B2141931600547700647710 /* libY.a */; };
+		6B3E7C641600E0A600F62621 /* CGObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B3E7C621600DFC900F62621 /* CGObject.cpp */; };
+		6B734FCF160F307200B44198 /* TriMesh.fs in Copy Files */ = {isa = PBXBuildFile; fileRef = 6B734FAC160F2C4C00B44198 /* TriMesh.fs */; };
+		6B734FD0160F307200B44198 /* TriMesh.vs in Copy Files */ = {isa = PBXBuildFile; fileRef = 6B734FAD160F2C4C00B44198 /* TriMesh.vs */; };
+		6B734FF1160F37E100B44198 /* libAntTweakBar.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC47C6B1601DD9D00F35AC8 /* libAntTweakBar.dylib */; };
+		6B734FF2160F37E700B44198 /* libAntTweakBar.dylib in Copy Files */ = {isa = PBXBuildFile; fileRef = 6BC47C6B1601DD9D00F35AC8 /* libAntTweakBar.dylib */; };
+		6B734FF3160F37E700B44198 /* libOpenMeshCore.dylib in Copy Files */ = {isa = PBXBuildFile; fileRef = 6BC47C651601DB2300F35AC8 /* libOpenMeshCore.dylib */; };
+		6B9F7B6C15405597007B670A /* Wall.fs in Copy Files */ = {isa = PBXBuildFile; fileRef = 6B9F7B5C15405582007B670A /* Wall.fs */; };
+		6B9F7B6D15405597007B670A /* Wall.vs in Copy Files */ = {isa = PBXBuildFile; fileRef = 6B9F7B5D15405582007B670A /* Wall.vs */; };
+		6B9F7B6E15405597007B670A /* WallShadow.fs in Copy Files */ = {isa = PBXBuildFile; fileRef = 6B9F7B5E15405582007B670A /* WallShadow.fs */; };
+		6B9F7B6F15405597007B670A /* WallShadow.vs in Copy Files */ = {isa = PBXBuildFile; fileRef = 6B9F7B5F15405582007B670A /* WallShadow.vs */; };
+		6BBE57C0150267FC001CD166 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BBE57BE150267FC001CD166 /* GLUT.framework */; };
+		6BBE57C1150267FC001CD166 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BBE57BF150267FC001CD166 /* OpenGL.framework */; };
+		6BBE57C815026A52001CD166 /* tinystr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6BBE57C215026A52001CD166 /* tinystr.cpp */; };
+		6BBE57C915026A52001CD166 /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6BBE57C415026A52001CD166 /* tinyxml.cpp */; };
+		6BBE57CA15026A52001CD166 /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6BBE57C615026A52001CD166 /* tinyxmlerror.cpp */; };
+		6BBE57CB15026A52001CD166 /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6BBE57C715026A52001CD166 /* tinyxmlparser.cpp */; };
+		6BC47C661601DB2300F35AC8 /* libOpenMeshCore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC47C651601DB2300F35AC8 /* libOpenMeshCore.dylib */; };
+		6BC47C691601DD8E00F35AC8 /* libGLEW.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC47C671601DD8E00F35AC8 /* libGLEW.a */; };
+		6BC47C6A1601DD8E00F35AC8 /* libGLEWmx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC47C681601DD8E00F35AC8 /* libGLEWmx.a */; };
+		6BC47C6E1601DDB400F35AC8 /* libtet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC47C6D1601DDB400F35AC8 /* libtet.a */; };
+		6BF4BC49150257FB00A18D17 /* Config.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6BF4BC28150257FB00A18D17 /* Config.cpp */; };
+		6BF4BC4A150257FB00A18D17 /* Constraint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6BF4BC2A150257FB00A18D17 /* Constraint.cpp */; };
+		6BF4BC4B150257FB00A18D17 /* Core.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6BF4BC2D150257FB00A18D17 /* Core.cpp */; };
+		6BF4BC4C150257FB00A18D17 /* Drawer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6BF4BC2F150257FB00A18D17 /* Drawer.cpp */; };
+		6BF4BC4D150257FB00A18D17 /* EventHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6BF4BC31150257FB00A18D17 /* EventHandler.cpp */; };
+		6BF4BC50150257FB00A18D17 /* Gui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6BF4BC3F150257FB00A18D17 /* Gui.cpp */; };
+		6BF4BC53150257FB00A18D17 /* PhysParam.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6BF4BC47150257FB00A18D17 /* PhysParam.cpp */; };
+		6BF4BC561502581F00A18D17 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6BF4BC551502581F00A18D17 /* main.cpp */; };
+		6BF4BC651502583200A18D17 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6BF4BC571502583200A18D17 /* Scene.cpp */; };
+		6BF4BC671502583200A18D17 /* TetMesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6BF4BC5B1502583200A18D17 /* TetMesh.cpp */; };
+		6BF4BC681502583200A18D17 /* TriMesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6BF4BC5D1502583200A18D17 /* TriMesh.cpp */; };
+		6BF4BC6A1502583200A18D17 /* Wall.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6BF4BC621502583200A18D17 /* Wall.cpp */; };
+		6BF4BC771502589400A18D17 /* Cluster.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6BF4BC6D1502589400A18D17 /* Cluster.cpp */; };
+		6BF4BC781502589400A18D17 /* Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6BF4BC6F1502589400A18D17 /* Particle.cpp */; };
+		6BF4BC791502589400A18D17 /* ShapeMatchingObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6BF4BC711502589400A18D17 /* ShapeMatchingObject.cpp */; };
+		6BF4BC7A1502589400A18D17 /* Sphere.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6BF4BC731502589400A18D17 /* Sphere.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6B2141901600547700647710 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B2141881600547700647710 /* Y.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6BE7F006159F3F51009DE6EF;
+			remoteInfo = Y_iOS;
+		};
+		6B2141921600547700647710 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B2141881600547700647710 /* Y.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6B21181316004F3B00647710;
+			remoteInfo = Y;
+		};
+		6B2141941600547F00647710 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B2141881600547700647710 /* Y.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B21181216004F3B00647710;
+			remoteInfo = Y;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6BF4BC15150255CA00A18D17 /* Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				6B734FF2160F37E700B44198 /* libAntTweakBar.dylib in Copy Files */,
+				6B734FF3160F37E700B44198 /* libOpenMeshCore.dylib in Copy Files */,
+				6B734FCF160F307200B44198 /* TriMesh.fs in Copy Files */,
+				6B734FD0160F307200B44198 /* TriMesh.vs in Copy Files */,
+				6B9F7B6C15405597007B670A /* Wall.fs in Copy Files */,
+				6B9F7B6D15405597007B670A /* Wall.vs in Copy Files */,
+				6B9F7B6E15405597007B670A /* WallShadow.fs in Copy Files */,
+				6B9F7B6F15405597007B670A /* WallShadow.vs in Copy Files */,
+			);
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6B2141881600547700647710 /* Y.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Y.xcodeproj; path = ../../../../dev/Y/Y.xcodeproj; sourceTree = "<group>"; };
+		6B3E7C621600DFC900F62621 /* CGObject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CGObject.cpp; sourceTree = "<group>"; };
+		6B3E7C631600DFC900F62621 /* CGObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGObject.h; sourceTree = "<group>"; };
+		6B734FAC160F2C4C00B44198 /* TriMesh.fs */ = {isa = PBXFileReference; explicitFileType = sourcecode.glsl; fileEncoding = 4; name = TriMesh.fs; path = ../../shader/TriMesh.fs; sourceTree = "<group>"; };
+		6B734FAD160F2C4C00B44198 /* TriMesh.vs */ = {isa = PBXFileReference; explicitFileType = sourcecode.glsl; fileEncoding = 4; name = TriMesh.vs; path = ../../shader/TriMesh.vs; sourceTree = "<group>"; };
+		6B9F7B5C15405582007B670A /* Wall.fs */ = {isa = PBXFileReference; explicitFileType = sourcecode.glsl; fileEncoding = 4; name = Wall.fs; path = ../../shader/Wall.fs; sourceTree = "<group>"; };
+		6B9F7B5D15405582007B670A /* Wall.vs */ = {isa = PBXFileReference; explicitFileType = sourcecode.glsl; fileEncoding = 4; name = Wall.vs; path = ../../shader/Wall.vs; sourceTree = "<group>"; };
+		6B9F7B5E15405582007B670A /* WallShadow.fs */ = {isa = PBXFileReference; explicitFileType = sourcecode.glsl; fileEncoding = 4; name = WallShadow.fs; path = ../../shader/WallShadow.fs; sourceTree = "<group>"; };
+		6B9F7B5F15405582007B670A /* WallShadow.vs */ = {isa = PBXFileReference; explicitFileType = sourcecode.glsl; fileEncoding = 4; name = WallShadow.vs; path = ../../shader/WallShadow.vs; sourceTree = "<group>"; };
+		6BBE57BE150267FC001CD166 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		6BBE57BF150267FC001CD166 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		6BBE57C215026A52001CD166 /* tinystr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinystr.cpp; sourceTree = "<group>"; };
+		6BBE57C315026A52001CD166 /* tinystr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tinystr.h; sourceTree = "<group>"; };
+		6BBE57C415026A52001CD166 /* tinyxml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxml.cpp; sourceTree = "<group>"; };
+		6BBE57C515026A52001CD166 /* tinyxml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tinyxml.h; sourceTree = "<group>"; };
+		6BBE57C615026A52001CD166 /* tinyxmlerror.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxmlerror.cpp; sourceTree = "<group>"; };
+		6BBE57C715026A52001CD166 /* tinyxmlparser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxmlparser.cpp; sourceTree = "<group>"; };
+		6BC47C651601DB2300F35AC8 /* libOpenMeshCore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libOpenMeshCore.dylib; path = ../../../../dev/dylib/libOpenMeshCore.dylib; sourceTree = "<group>"; };
+		6BC47C671601DD8E00F35AC8 /* libGLEW.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLEW.a; path = ../../../../dev/lib/libGLEW.a; sourceTree = "<group>"; };
+		6BC47C681601DD8E00F35AC8 /* libGLEWmx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLEWmx.a; path = ../../../../dev/lib/libGLEWmx.a; sourceTree = "<group>"; };
+		6BC47C6B1601DD9D00F35AC8 /* libAntTweakBar.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libAntTweakBar.dylib; path = ../../../../dev/dylib/libAntTweakBar.dylib; sourceTree = "<group>"; };
+		6BC47C6D1601DDB400F35AC8 /* libtet.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libtet.a; path = ../../../../dev/lib/libtet.a; sourceTree = "<group>"; };
+		6BF4BC17150255CA00A18D17 /* Real-Time Example-Based Elastic Deformation */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = "Real-Time Example-Based Elastic Deformation"; path = "Real-Time_Example-Based_Elastic_Deformation"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BF4BC28150257FB00A18D17 /* Config.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Config.cpp; sourceTree = "<group>"; };
+		6BF4BC29150257FB00A18D17 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		6BF4BC2A150257FB00A18D17 /* Constraint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Constraint.cpp; sourceTree = "<group>"; };
+		6BF4BC2B150257FB00A18D17 /* Constraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constraint.h; sourceTree = "<group>"; };
+		6BF4BC2C150257FB00A18D17 /* ConstraintTemp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConstraintTemp.h; sourceTree = "<group>"; };
+		6BF4BC2D150257FB00A18D17 /* Core.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Core.cpp; sourceTree = "<group>"; };
+		6BF4BC2E150257FB00A18D17 /* Core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
+		6BF4BC2F150257FB00A18D17 /* Drawer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Drawer.cpp; sourceTree = "<group>"; };
+		6BF4BC30150257FB00A18D17 /* Drawer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drawer.h; sourceTree = "<group>"; };
+		6BF4BC31150257FB00A18D17 /* EventHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EventHandler.cpp; sourceTree = "<group>"; };
+		6BF4BC32150257FB00A18D17 /* EventHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventHandler.h; sourceTree = "<group>"; };
+		6BF4BC3F150257FB00A18D17 /* Gui.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Gui.cpp; sourceTree = "<group>"; };
+		6BF4BC40150257FB00A18D17 /* Gui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gui.h; sourceTree = "<group>"; };
+		6BF4BC44150257FB00A18D17 /* params.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = params.h; sourceTree = "<group>"; };
+		6BF4BC47150257FB00A18D17 /* PhysParam.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhysParam.cpp; sourceTree = "<group>"; };
+		6BF4BC48150257FB00A18D17 /* PhysParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhysParam.h; sourceTree = "<group>"; };
+		6BF4BC551502581F00A18D17 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		6BF4BC571502583200A18D17 /* Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
+		6BF4BC581502583200A18D17 /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
+		6BF4BC5B1502583200A18D17 /* TetMesh.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TetMesh.cpp; sourceTree = "<group>"; };
+		6BF4BC5C1502583200A18D17 /* TetMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TetMesh.h; sourceTree = "<group>"; };
+		6BF4BC5D1502583200A18D17 /* TriMesh.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TriMesh.cpp; sourceTree = "<group>"; };
+		6BF4BC5E1502583200A18D17 /* TriMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TriMesh.h; sourceTree = "<group>"; };
+		6BF4BC621502583200A18D17 /* Wall.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Wall.cpp; sourceTree = "<group>"; };
+		6BF4BC631502583200A18D17 /* Wall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wall.h; sourceTree = "<group>"; };
+		6BF4BC6D1502589400A18D17 /* Cluster.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Cluster.cpp; sourceTree = "<group>"; };
+		6BF4BC6E1502589400A18D17 /* Cluster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cluster.h; sourceTree = "<group>"; };
+		6BF4BC6F1502589400A18D17 /* Particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Particle.cpp; sourceTree = "<group>"; };
+		6BF4BC701502589400A18D17 /* Particle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Particle.h; sourceTree = "<group>"; };
+		6BF4BC711502589400A18D17 /* ShapeMatchingObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShapeMatchingObject.cpp; sourceTree = "<group>"; };
+		6BF4BC721502589400A18D17 /* ShapeMatchingObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapeMatchingObject.h; sourceTree = "<group>"; };
+		6BF4BC731502589400A18D17 /* Sphere.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sphere.cpp; sourceTree = "<group>"; };
+		6BF4BC741502589400A18D17 /* Sphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sphere.h; sourceTree = "<group>"; };
+		6BF4BC751502589400A18D17 /* Vertex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vertex.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6BF4BC14150255CA00A18D17 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B734FF1160F37E100B44198 /* libAntTweakBar.dylib in Frameworks */,
+				6BC47C6E1601DDB400F35AC8 /* libtet.a in Frameworks */,
+				6BC47C691601DD8E00F35AC8 /* libGLEW.a in Frameworks */,
+				6BC47C6A1601DD8E00F35AC8 /* libGLEWmx.a in Frameworks */,
+				6BC47C661601DB2300F35AC8 /* libOpenMeshCore.dylib in Frameworks */,
+				6B2141961600548C00647710 /* libY.a in Frameworks */,
+				6BBE57C0150267FC001CD166 /* GLUT.framework in Frameworks */,
+				6BBE57C1150267FC001CD166 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6B2141891600547700647710 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6B2141911600547700647710 /* libY.a */,
+				6B2141931600547700647710 /* libY.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6B81F8941504B7F60075A98A /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				6B734FAC160F2C4C00B44198 /* TriMesh.fs */,
+				6B734FAD160F2C4C00B44198 /* TriMesh.vs */,
+				6B9F7B5C15405582007B670A /* Wall.fs */,
+				6B9F7B5D15405582007B670A /* Wall.vs */,
+				6B9F7B5E15405582007B670A /* WallShadow.fs */,
+				6B9F7B5F15405582007B670A /* WallShadow.vs */,
+			);
+			name = Shaders;
+			sourceTree = "<group>";
+		};
+		6B8CB5DD15036E0400EA6DFE /* Static Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				6BC47C6D1601DDB400F35AC8 /* libtet.a */,
+				6BC47C671601DD8E00F35AC8 /* libGLEW.a */,
+				6BC47C681601DD8E00F35AC8 /* libGLEWmx.a */,
+			);
+			name = "Static Libraries";
+			sourceTree = "<group>";
+		};
+		6B8F7A0D15049B33003D3E1D /* Dynamic Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				6BC47C6B1601DD9D00F35AC8 /* libAntTweakBar.dylib */,
+				6BC47C651601DB2300F35AC8 /* libOpenMeshCore.dylib */,
+			);
+			name = "Dynamic Libraries";
+			sourceTree = "<group>";
+		};
+		6BBE57CC1502701A001CD166 /* TinyXML */ = {
+			isa = PBXGroup;
+			children = (
+				6BBE57C215026A52001CD166 /* tinystr.cpp */,
+				6BBE57C315026A52001CD166 /* tinystr.h */,
+				6BBE57C415026A52001CD166 /* tinyxml.cpp */,
+				6BBE57C515026A52001CD166 /* tinyxml.h */,
+				6BBE57C615026A52001CD166 /* tinyxmlerror.cpp */,
+				6BBE57C715026A52001CD166 /* tinyxmlparser.cpp */,
+			);
+			name = TinyXML;
+			sourceTree = "<group>";
+		};
+		6BBE57D0150270C2001CD166 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6BBE57BE150267FC001CD166 /* GLUT.framework */,
+				6BBE57BF150267FC001CD166 /* OpenGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6BF4BC0C150255CA00A18D17 = {
+			isa = PBXGroup;
+			children = (
+				6B2141881600547700647710 /* Y.xcodeproj */,
+				6B8F7A0D15049B33003D3E1D /* Dynamic Libraries */,
+				6B8CB5DD15036E0400EA6DFE /* Static Libraries */,
+				6BBE57D0150270C2001CD166 /* Frameworks */,
+				6BF4BC1A150255CA00A18D17 /* Real-Time Example-Based Elastic Deformation */,
+				6BF4BC18150255CA00A18D17 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6BF4BC18150255CA00A18D17 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6BF4BC17150255CA00A18D17 /* Real-Time Example-Based Elastic Deformation */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6BF4BC1A150255CA00A18D17 /* Real-Time Example-Based Elastic Deformation */ = {
+			isa = PBXGroup;
+			children = (
+				6B81F8941504B7F60075A98A /* Shaders */,
+				6BBE57CC1502701A001CD166 /* TinyXML */,
+				6BF4BC28150257FB00A18D17 /* Config.cpp */,
+				6BF4BC29150257FB00A18D17 /* Config.h */,
+				6B3E7C621600DFC900F62621 /* CGObject.cpp */,
+				6B3E7C631600DFC900F62621 /* CGObject.h */,
+				6BF4BC2A150257FB00A18D17 /* Constraint.cpp */,
+				6BF4BC2B150257FB00A18D17 /* Constraint.h */,
+				6BF4BC2C150257FB00A18D17 /* ConstraintTemp.h */,
+				6BF4BC2D150257FB00A18D17 /* Core.cpp */,
+				6BF4BC2E150257FB00A18D17 /* Core.h */,
+				6BF4BC2F150257FB00A18D17 /* Drawer.cpp */,
+				6BF4BC30150257FB00A18D17 /* Drawer.h */,
+				6BF4BC31150257FB00A18D17 /* EventHandler.cpp */,
+				6BF4BC32150257FB00A18D17 /* EventHandler.h */,
+				6BF4BC3F150257FB00A18D17 /* Gui.cpp */,
+				6BF4BC40150257FB00A18D17 /* Gui.h */,
+				6BF4BC47150257FB00A18D17 /* PhysParam.cpp */,
+				6BF4BC48150257FB00A18D17 /* PhysParam.h */,
+				6BF4BC6D1502589400A18D17 /* Cluster.cpp */,
+				6BF4BC6E1502589400A18D17 /* Cluster.h */,
+				6BF4BC6F1502589400A18D17 /* Particle.cpp */,
+				6BF4BC701502589400A18D17 /* Particle.h */,
+				6BF4BC711502589400A18D17 /* ShapeMatchingObject.cpp */,
+				6BF4BC721502589400A18D17 /* ShapeMatchingObject.h */,
+				6BF4BC731502589400A18D17 /* Sphere.cpp */,
+				6BF4BC741502589400A18D17 /* Sphere.h */,
+				6BF4BC751502589400A18D17 /* Vertex.h */,
+				6BF4BC571502583200A18D17 /* Scene.cpp */,
+				6BF4BC581502583200A18D17 /* Scene.h */,
+				6BF4BC5B1502583200A18D17 /* TetMesh.cpp */,
+				6BF4BC5C1502583200A18D17 /* TetMesh.h */,
+				6BF4BC5D1502583200A18D17 /* TriMesh.cpp */,
+				6BF4BC5E1502583200A18D17 /* TriMesh.h */,
+				6BF4BC621502583200A18D17 /* Wall.cpp */,
+				6BF4BC631502583200A18D17 /* Wall.h */,
+				6BF4BC551502581F00A18D17 /* main.cpp */,
+				6BF4BC44150257FB00A18D17 /* params.h */,
+			);
+			name = "Real-Time Example-Based Elastic Deformation";
+			path = "Real-TIme Example-Based Elastic Deformation";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6BF4BC16150255CA00A18D17 /* Real-Time Example-Based Elastic Deformation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BF4BC21150255CA00A18D17 /* Build configuration list for PBXNativeTarget "Real-Time Example-Based Elastic Deformation" */;
+			buildPhases = (
+				6BF4BC13150255CA00A18D17 /* Sources */,
+				6BF4BC14150255CA00A18D17 /* Frameworks */,
+				6BF4BC15150255CA00A18D17 /* Copy Files */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6B2141951600547F00647710 /* PBXTargetDependency */,
+			);
+			name = "Real-Time Example-Based Elastic Deformation";
+			productName = "Real-TIme Example-Based Elastic Deformation";
+			productReference = 6BF4BC17150255CA00A18D17 /* Real-Time Example-Based Elastic Deformation */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6BF4BC0E150255CA00A18D17 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 6BF4BC11150255CA00A18D17 /* Build configuration list for PBXProject "Real-Time Example-Based Elastic Deformation" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6BF4BC0C150255CA00A18D17;
+			productRefGroup = 6BF4BC18150255CA00A18D17 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 6B2141891600547700647710 /* Products */;
+					ProjectRef = 6B2141881600547700647710 /* Y.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				6BF4BC16150255CA00A18D17 /* Real-Time Example-Based Elastic Deformation */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		6B2141911600547700647710 /* libY.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			name = libY.a;
+			path = libY_iOS.a;
+			remoteRef = 6B2141901600547700647710 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6B2141931600547700647710 /* libY.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libY.a;
+			remoteRef = 6B2141921600547700647710 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6BF4BC13150255CA00A18D17 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B3E7C641600E0A600F62621 /* CGObject.cpp in Sources */,
+				6BF4BC49150257FB00A18D17 /* Config.cpp in Sources */,
+				6BF4BC4A150257FB00A18D17 /* Constraint.cpp in Sources */,
+				6BF4BC4B150257FB00A18D17 /* Core.cpp in Sources */,
+				6BF4BC4C150257FB00A18D17 /* Drawer.cpp in Sources */,
+				6BF4BC4D150257FB00A18D17 /* EventHandler.cpp in Sources */,
+				6BF4BC50150257FB00A18D17 /* Gui.cpp in Sources */,
+				6BF4BC53150257FB00A18D17 /* PhysParam.cpp in Sources */,
+				6BF4BC561502581F00A18D17 /* main.cpp in Sources */,
+				6BF4BC651502583200A18D17 /* Scene.cpp in Sources */,
+				6BF4BC671502583200A18D17 /* TetMesh.cpp in Sources */,
+				6BF4BC681502583200A18D17 /* TriMesh.cpp in Sources */,
+				6BF4BC6A1502583200A18D17 /* Wall.cpp in Sources */,
+				6BF4BC771502589400A18D17 /* Cluster.cpp in Sources */,
+				6BF4BC781502589400A18D17 /* Particle.cpp in Sources */,
+				6BF4BC791502589400A18D17 /* ShapeMatchingObject.cpp in Sources */,
+				6BF4BC7A1502589400A18D17 /* Sphere.cpp in Sources */,
+				6BBE57C815026A52001CD166 /* tinystr.cpp in Sources */,
+				6BBE57C915026A52001CD166 /* tinyxml.cpp in Sources */,
+				6BBE57CA15026A52001CD166 /* tinyxmlerror.cpp in Sources */,
+				6BBE57CB15026A52001CD166 /* tinyxmlparser.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6B2141951600547F00647710 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Y;
+			targetProxy = 6B2141941600547F00647710 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		6BF4BC1F150255CA00A18D17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../include/,
+					/usr/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../../../dev/lib\"",
+					"\"$(SRCROOT)/../../../../dev/dylib\"",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../../../dev/Y/Headers\" \"$(SRCROOT)/../../../../dev/OpenMeshCore\"";
+			};
+			name = Debug;
+		};
+		6BF4BC20150255CA00A18D17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../include/,
+					/usr/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../../../dev/lib\"",
+					"\"$(SRCROOT)/../../../../dev/dylib\"",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../../../dev/Y/Headers\" \"$(SRCROOT)/../../../../dev/OpenMeshCore\"";
+			};
+			name = Release;
+		};
+		6BF4BC22150255CA00A18D17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_OPENMP_SUPPORT = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					../include/,
+					/usr/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../dylib\"",
+					"\"$(SRCROOT)/../../../../dev/dylib\"",
+				);
+				PRODUCT_NAME = "Real-Time_Example-Based_Elastic_Deformation";
+				USER_HEADER_SEARCH_PATHS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		6BF4BC23150255CA00A18D17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_OPENMP_SUPPORT = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					../include/,
+					/usr/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../dylib\"",
+					"\"$(SRCROOT)/../../../../dev/dylib\"",
+				);
+				PRODUCT_NAME = "Real-Time_Example-Based_Elastic_Deformation";
+				USER_HEADER_SEARCH_PATHS = "$(inherited)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6BF4BC11150255CA00A18D17 /* Build configuration list for PBXProject "Real-Time Example-Based Elastic Deformation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BF4BC1F150255CA00A18D17 /* Debug */,
+				6BF4BC20150255CA00A18D17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6BF4BC21150255CA00A18D17 /* Build configuration list for PBXNativeTarget "Real-Time Example-Based Elastic Deformation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BF4BC22150255CA00A18D17 /* Debug */,
+				6BF4BC23150255CA00A18D17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6BF4BC0E150255CA00A18D17 /* Project object */;
+}
