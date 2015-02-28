@@ -8,8 +8,6 @@
 
 #include "CGObject.h"
 
-struct TetMesh::Tetra;
-
 struct TriMeshTraits : public OpenMesh::DefaultTraits {
     typedef Y::Vector3d Point;
     typedef Y::Vector3d Normal;
