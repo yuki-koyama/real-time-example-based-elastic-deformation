@@ -11,6 +11,8 @@ namespace {
     Core& core = Core::getInstance();
     static const unsigned int shadowTextureWidth =  SHADOW_TEXTURE_SIZE;
     static const unsigned int shadowTextureHeight = SHADOW_TEXTURE_SIZE;
+    
+    inline void glColor3(Y::Vector<double, 3> vec) { glColor3dv(vec.val); }
 }
 
 void Drawer::reshape(int width, int height) {
@@ -73,16 +75,6 @@ void Drawer::init() {
     glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, ambient);
 	glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, specular);
 	glMaterialfv(GL_FRONT_AND_BACK, GL_SHININESS, shininess);
-}
-
-// temp
-extern void glColor3(Y::Vector<double, 3> vec);
-void glColor3(Y::Vector<double, 3> vec) {
-    double array[3];
-    array[0] = vec[0];
-    array[1] = vec[1];
-    array[2] = vec[2];
-    glColor3dv(array);
 }
 
 void Drawer::scene(bool shadowMapping) {

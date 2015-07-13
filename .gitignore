@@ -7,7 +7,8 @@
 DerivedData/
  
 # Xcode project files except for the project file
-*.xcodeproj/*
+*.xcodeproj
+*.xcodeproj/project.xcworkspace
 !*.xcodeproj/project.pbxproj
  
 # Windows image thumbnail file

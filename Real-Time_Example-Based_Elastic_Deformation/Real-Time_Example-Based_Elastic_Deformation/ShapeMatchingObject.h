@@ -26,8 +26,6 @@ public:
         Config();
     } m_config;
     struct Initial {
-//        Y::Vector3f m_offset_min;
-//        Y::Vector3f m_offset_max;
         Y::Vector3f m_offset;
         Y::Vector3f m_velocity;
     } m_initial;

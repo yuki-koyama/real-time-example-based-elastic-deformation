@@ -13,7 +13,6 @@ Sphere::~Sphere() {
 }
 
 void Sphere::renderObject() {
-    
     glMatrixMode(GL_MODELVIEW);
     glPushMatrix();
     float r = Core::getInstance().m_config.SPHERE_RADIUS;

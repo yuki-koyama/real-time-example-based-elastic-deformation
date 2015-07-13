@@ -185,7 +185,7 @@ public:
         // http://www.page.sannet.ne.jp/d_takahashi/boost/ublas/index.html
         
         assert(sizeCol_ == sizeRow_);
-        unsigned int n = sizeCol_;
+        size_t n = sizeCol_;
         
         typedef boost::numeric::ublas::vector<double> dvector;
         typedef boost::numeric::ublas::matrix<double> dmatrix;

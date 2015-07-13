@@ -32,7 +32,7 @@ void TetMesh::init(const tetgenio& in) {
     remove_unused_vertices();
 }
 void TetMesh::remove_unused_vertices() {
-    int n = vertices_.size();
+    size_t n = vertices_.size();
     unused_vertices_ = vertices_;
     vertices_.clear();
     unused_indices_.clear();
@@ -41,7 +41,7 @@ void TetMesh::remove_unused_vertices() {
         Vertex& v = unused_vertices_[i];
         if (v.neighbor_vid_.empty())
             continue;
-        unused_indices_[i] = vertices_.size();
+        unused_indices_[i] = static_cast<int>(vertices_.size());
         vertices_.push_back(v);
     }
     if (vertices_.size() == n) {

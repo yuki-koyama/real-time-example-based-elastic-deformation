@@ -103,7 +103,7 @@ bool ShapeMatchingObject::loadNode(const string& node_fname) {
             p.x_example.push_back(pos.convert<float>());
         }
     } else {    // mapping while taking unused vertex indices into account
-        int n = tetmesh.unused_indices_.size();
+        int n = static_cast<int>(tetmesh.unused_indices_.size());
         for (int i = 0; i < n; ++i) {
             int vid = tetmesh.unused_indices_[i];
             if (vid == -1)
@@ -264,7 +264,6 @@ bool ShapeMatchingObject::loadXML(const TiXmlElement* txe_object) {
             txe_offset_min->QueryDoubleAttribute("x", &x);
             txe_offset_min->QueryDoubleAttribute("y", &y);
             txe_offset_min->QueryDoubleAttribute("z", &z);
-//            m_initial.m_offset_min = Y::Vector3f(x, y, z);
             m_initial.m_offset = Y::Vector3f(x, y, z);
         }
         const TiXmlElement* txe_offset_max = txe_initial->FirstChildElement("offset_max");
@@ -273,7 +272,6 @@ bool ShapeMatchingObject::loadXML(const TiXmlElement* txe_object) {
             txe_offset_max->QueryDoubleAttribute("x", &x);
             txe_offset_max->QueryDoubleAttribute("y", &y);
             txe_offset_max->QueryDoubleAttribute("z", &z);
-//            m_initial.m_offset_max = Y::Vector3f(x, y, z);
             m_initial.m_offset = Y::Vector3f(x, y, z);
         }
         const TiXmlElement* txe_velocity = txe_initial->FirstChildElement("velocity");
@@ -397,9 +395,6 @@ bool ShapeMatchingObject::saveXML(TiXmlElement* txe_object) const {
         txe_offset_min->SetDoubleAttribute("x", m_initial.m_offset.x_);
         txe_offset_min->SetDoubleAttribute("y", m_initial.m_offset.y_);
         txe_offset_min->SetDoubleAttribute("z", m_initial.m_offset.z_);
-//        txe_offset_min->SetDoubleAttribute("x", m_initial.m_offset_min.x_);
-//        txe_offset_min->SetDoubleAttribute("y", m_initial.m_offset_min.y_);
-//        txe_offset_min->SetDoubleAttribute("z", m_initial.m_offset_min.z_);
         
         TiXmlElement* txe_offset_max = new TiXmlElement("offset_max");
         txe_initial->LinkEndChild(txe_offset_max);
@@ -407,9 +402,6 @@ bool ShapeMatchingObject::saveXML(TiXmlElement* txe_object) const {
         txe_offset_max->SetDoubleAttribute("x", m_initial.m_offset.x_);
         txe_offset_max->SetDoubleAttribute("y", m_initial.m_offset.y_);
         txe_offset_max->SetDoubleAttribute("z", m_initial.m_offset.z_);
-//        txe_offset_max->SetDoubleAttribute("x", m_initial.m_offset_max.x_);
-//        txe_offset_max->SetDoubleAttribute("y", m_initial.m_offset_max.y_);
-//        txe_offset_max->SetDoubleAttribute("z", m_initial.m_offset_max.z_);
         
         TiXmlElement* txe_velocity = new TiXmlElement("velocity");
         txe_initial->LinkEndChild(txe_velocity);
@@ -429,16 +421,9 @@ bool ShapeMatchingObject::saveXML(TiXmlElement* txe_object) const {
 }
 
 void ShapeMatchingObject::reset() {
-//    float tx = rand() / static_cast<float>(RAND_MAX);
-//    float ty = rand() / static_cast<float>(RAND_MAX);
-//    float tz = rand() / static_cast<float>(RAND_MAX);
-//    Y::Vector3f offset((1 - tx) * m_initial.m_offset_min.x_ + tx * m_initial.m_offset_max.x_,
-//                       (1 - ty) * m_initial.m_offset_min.y_ + ty * m_initial.m_offset_max.y_,
-//                       (1 - tz) * m_initial.m_offset_min.z_ + tz * m_initial.m_offset_max.z_);
     for (int i = 0; i < particles.size(); ++i) {
         Particle& p = particles[i];
         p.x = p.x0 + m_initial.m_offset;
-//        p.x = p.x0 + offset;
         p.v = m_initial.m_velocity;
         p.f = Y::Vector3f(0.0, 0.0, 0.0);
     }
@@ -929,7 +914,6 @@ void ShapeMatchingObject::dampingGlobal(float dt) {
     for (vector<Particle>::iterator p = particles.begin(); p != particles.end(); ++p) {
         Y::Vector3f Ri = p->x - xcm;
         Y::Vector3f tmp = Ri % (p->m * p->v);
-        //        Y::Vector3f tmp = Ri.CrossProduct(p->m * p->v);
         L += tmp;
         Y::Matrix3x3f RTilde = Y::Matrix3x3f(0.0f, - Ri.z, Ri.y, 
                                              Ri.z, 0.0f, - Ri.x,
@@ -974,7 +958,7 @@ void ShapeMatchingObject::precomputeExamples() {
 }
 
 void ShapeMatchingObject::precomputeExamples_Umode() {
-    numberOfModes = particles.front().x_example.size();
+    numberOfModes = static_cast<int>(particles.front().x_example.size());
     
     // store current configuration
     for (vector<Particle>::iterator p = particles.begin(); p != particles.end(); ++p)
@@ -1024,8 +1008,8 @@ void ShapeMatchingObject::precomputeExamples_Umode() {
     for (vector<Particle>::iterator p = particles.begin(); p != particles.end(); ++p)
         p->x = p->x_tmp;
 }
+
 void ShapeMatchingObject::precomputeExamples_AtA() {
-    
     int n = numberOfModes - 1;
     if (0 < n) {
         KLIB::MatrixVLd AtA_global(n, n);

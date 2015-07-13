@@ -30,7 +30,7 @@ void EventHandler::glut_mouse(int button, int state, int x, int y) {
                     Particle& p = smObject.particles[i];
                     if (p.constraintID == -1)
                         continue;
-                    Y::Vector3d x3 = static_cast<Y::Vector3f>(p.constraintPos).convert<double>();
+                    Y::Vector3d x3 = p.constraintPos.convert<double>();
                     Y::Vector2d x2 = Y::GLUtil::project(x3).xy();
                     if (10 < (x2 - m_manipulate_prevPos).length())
                         continue;
@@ -193,7 +193,7 @@ void EventHandler::glut_mouse(int button, int state, int x, int y) {
                     if (p.constraintID != -1)
                         return;     // groups of constrained particles should not overlap
                 }
-                m_currentConstraintID = core.m_constraints.size();
+                m_currentConstraintID = static_cast<int>(core.m_constraints.size());
                 core.m_constraints.push_back(Constraint());
                 Constraint& c = core.m_constraints.back();
                 for (int i = 0; i < smObject.particles.size(); ++i) {
