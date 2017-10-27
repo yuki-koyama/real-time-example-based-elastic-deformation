@@ -74,11 +74,11 @@
 /* Begin PBXFileReference section */
 		6B083CCB16102844007C7271 /* Embed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Embed.h; sourceTree = "<group>"; };
 		6B083CCF16102892007C7271 /* Embed.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Embed.cpp; sourceTree = "<group>"; };
-		6B083CD1161028B6007C7271 /* libAntTweakBar.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libAntTweakBar.dylib; sourceTree = "<group>"; };
-		6B083CD2161028B6007C7271 /* libOpenMeshCore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libOpenMeshCore.dylib; sourceTree = "<group>"; };
-		6B083CD5161028BE007C7271 /* libtet.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtet.a; sourceTree = "<group>"; };
-		6B083CD6161028BE007C7271 /* libGLEW.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGLEW.a; sourceTree = "<group>"; };
-		6B083CD7161028BE007C7271 /* libGLEWmx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGLEWmx.a; sourceTree = "<group>"; };
+		6B083CD1161028B6007C7271 /* libAntTweakBar.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libAntTweakBar.dylib; path = lib/libAntTweakBar.dylib; sourceTree = "<group>"; };
+		6B083CD2161028B6007C7271 /* libOpenMeshCore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libOpenMeshCore.dylib; path = lib/libOpenMeshCore.dylib; sourceTree = "<group>"; };
+		6B083CD5161028BE007C7271 /* libtet.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libtet.a; path = lib/libtet.a; sourceTree = "<group>"; };
+		6B083CD6161028BE007C7271 /* libGLEW.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLEW.a; path = lib/libGLEW.a; sourceTree = "<group>"; };
+		6B083CD7161028BE007C7271 /* libGLEWmx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLEWmx.a; path = lib/libGLEWmx.a; sourceTree = "<group>"; };
 		6B083CDB16102912007C7271 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		6B083CDC16102912007C7271 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		6B083CE916102A19007C7271 /* box */ = {isa = PBXFileReference; lastKnownFileType = folder; name = box; path = data/box; sourceTree = "<group>"; };
@@ -126,12 +126,12 @@
 		6BBD919016101F1900BC5A69 /* tinyxml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tinyxml.h; sourceTree = "<group>"; };
 		6BBD919116101F1900BC5A69 /* tinyxmlerror.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxmlerror.cpp; sourceTree = "<group>"; };
 		6BBD919216101F1900BC5A69 /* tinyxmlparser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxmlparser.cpp; sourceTree = "<group>"; };
-		6BBD919916101F4700BC5A69 /* TriMesh.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = TriMesh.fs; sourceTree = "<group>"; };
-		6BBD919A16101F4700BC5A69 /* TriMesh.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = TriMesh.vs; sourceTree = "<group>"; };
-		6BBD919B16101F4700BC5A69 /* Wall.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Wall.fs; sourceTree = "<group>"; };
-		6BBD919C16101F4700BC5A69 /* Wall.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Wall.vs; sourceTree = "<group>"; };
-		6BBD919D16101F4700BC5A69 /* WallShadow.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = WallShadow.fs; sourceTree = "<group>"; };
-		6BBD919E16101F4700BC5A69 /* WallShadow.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = WallShadow.vs; sourceTree = "<group>"; };
+		6BBD919916101F4700BC5A69 /* TriMesh.fs */ = {isa = PBXFileReference; explicitFileType = sourcecode.glsl; name = TriMesh.fs; path = shaders/TriMesh.fs; sourceTree = "<group>"; };
+		6BBD919A16101F4700BC5A69 /* TriMesh.vs */ = {isa = PBXFileReference; explicitFileType = sourcecode.glsl; name = TriMesh.vs; path = shaders/TriMesh.vs; sourceTree = "<group>"; };
+		6BBD919B16101F4700BC5A69 /* Wall.fs */ = {isa = PBXFileReference; explicitFileType = sourcecode.glsl; name = Wall.fs; path = shaders/Wall.fs; sourceTree = "<group>"; };
+		6BBD919C16101F4700BC5A69 /* Wall.vs */ = {isa = PBXFileReference; explicitFileType = sourcecode.glsl; name = Wall.vs; path = shaders/Wall.vs; sourceTree = "<group>"; };
+		6BBD919D16101F4700BC5A69 /* WallShadow.fs */ = {isa = PBXFileReference; explicitFileType = sourcecode.glsl; name = WallShadow.fs; path = shaders/WallShadow.fs; sourceTree = "<group>"; };
+		6BBD919E16101F4700BC5A69 /* WallShadow.vs */ = {isa = PBXFileReference; explicitFileType = sourcecode.glsl; name = WallShadow.vs; path = shaders/WallShadow.vs; sourceTree = "<group>"; };
 		6BBD919F1610204100BC5A69 /* invSqrt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = invSqrt.h; sourceTree = "<group>"; };
 		6BBD91A01610204100BC5A69 /* jacobi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = jacobi.h; sourceTree = "<group>"; };
 		6BBD91A11610204100BC5A69 /* Matrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Matrix.h; sourceTree = "<group>"; };
@@ -271,7 +271,8 @@
 				6BBD917916101B9100BC5A69 /* main.cpp */,
 				6BBD917A16101B9100BC5A69 /* params.h */,
 			);
-			path = "Real-Time_Example-Based_Elastic_Deformation";
+			name = "Real-Time_Example-Based_Elastic_Deformation";
+			path = src;
 			sourceTree = "<group>";
 		};
 		6BBD918C16101EEE00BC5A69 /* Libraries */ = {
@@ -302,7 +303,7 @@
 				6BBD919716101F1E00BC5A69 /* TinyXML */,
 			);
 			name = Libraries;
-			path = "Real-Time_Example-Based_Elastic_Deformation";
+			path = src;
 			sourceTree = "<group>";
 		};
 		6BBD919716101F1E00BC5A69 /* TinyXML */ = {
@@ -357,7 +358,7 @@
 		6BBD913716101B5100BC5A69 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0900;
 			};
 			buildConfigurationList = 6BBD913A16101B5100BC5A69 /* Build configuration list for PBXProject "Real-Time_Example-Based_Elastic_Deformation" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -414,15 +415,24 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -440,7 +450,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/include\"";
@@ -451,11 +461,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
@@ -471,7 +489,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = macosx;
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/include\"";
 			};
@@ -482,7 +500,7 @@
 			buildSettings = {
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)\"/**",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -493,7 +511,7 @@
 			buildSettings = {
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)\"/**",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
