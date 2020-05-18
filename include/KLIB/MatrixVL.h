@@ -212,7 +212,6 @@ public:
         }
         return result;
     };
-    vector_type solve(const vector_type& b) const;
 };
 
 // arithmetic (global) ====================
