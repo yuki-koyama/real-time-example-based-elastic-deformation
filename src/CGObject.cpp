@@ -2,12 +2,10 @@
 
 using namespace cg;
 
-CGObject::CGObject() {
+CGObject::CGObject()
+{
     vbo = 0;
     ibo = 0;
 }
 
-CGObject::~CGObject() {
-    
-}
-
+CGObject::~CGObject() {}

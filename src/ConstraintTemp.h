@@ -4,11 +4,10 @@
 
 class Particle;
 
-struct ConstraintTemp {
-    Particle* m_particle;
+struct ConstraintTemp
+{
+    Particle*              m_particle;
     std::vector<Particle*> m_neighborParticles;
-    Y::Vector3f m_constraintPos;
-    ConstraintTemp()
-        : m_particle(0)
-    {}
+    Y::Vector3f            m_constraintPos;
+    ConstraintTemp() : m_particle(0) {}
 };

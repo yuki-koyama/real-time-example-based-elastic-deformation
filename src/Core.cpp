@@ -1,6 +1,7 @@
 #include "Core.h"
 
-Core::Core() {
+Core::Core()
+{
     m_clkData.addEntry("t0");
     m_clkData.addEntry("t1");
     m_clkData.addEntry("t2");

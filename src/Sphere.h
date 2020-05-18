@@ -2,9 +2,11 @@
 
 #include "CGObject.h"
 
-class Sphere : public cg::CGObject {
+class Sphere : public cg::CGObject
+{
 public:
-    static Sphere& getInstance() {
+    static Sphere& getInstance()
+    {
         static Sphere p;
         return p;
     }
@@ -12,13 +14,11 @@ public:
     ~Sphere();
     void renderObject();
 
-    GLuint vbo;
-    GLuint ibo;
-    cg::Vertex *vertices;
-    GLushort *indices;
-    
+    GLuint      vbo;
+    GLuint      ibo;
+    cg::Vertex* vertices;
+    GLushort*   indices;
+
     void setBufferObject();
     void deleteBufferObject();
 };
-
-
