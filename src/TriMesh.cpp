@@ -49,9 +49,14 @@ void TriMesh::updateVBO() {
         Y::Vector3d v_point = point(v);
         Y::Vector3d v_normal = normal(v);
         TextureVertex data = {
-            v_point.x_, v_point.y_, v_point.z_,
-            v_normal.x_, v_normal.y_, v_normal.z_,
-            0.0, 0.0
+            static_cast<GLfloat>(v_point.x_),
+            static_cast<GLfloat>(v_point.y_),
+            static_cast<GLfloat>(v_point.z_),
+            static_cast<GLfloat>(v_normal.x_),
+            static_cast<GLfloat>(v_normal.y_),
+            static_cast<GLfloat>(v_normal.z_),
+            0.0,
+            0.0
         };
         tmp_vertices.push_back(data);
     }

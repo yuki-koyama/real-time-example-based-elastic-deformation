@@ -303,6 +303,16 @@ Vector<Scalar, 3> operator%(const Vector<Scalar, 3>& lhs, const Vector<Scalar, 3
 template <typename Scalar>
 Vector<Scalar, 3> cross_product(const Vector<Scalar, 3>& lhs, const Vector<Scalar, 3>& rhs) { return lhs % rhs; }
 
+// norm
+template <typename Scalar>
+Scalar norm(const Vector<Scalar, 3>& src) { return src.norm(); }
+
+template <typename Scalar>
+Vector<Scalar, 3> normalize(const Vector<Scalar, 3>& src) { return src.normalized(); }
+
+template <typename Scalar>
+void vectorize(Vector<Scalar, 3>& src, Scalar val) { src[0] = val; src[1] = val; src[2] = val; }
+
 // 90-dgree rotation of 2-dimensional vector ===============
 template <typename Scalar>
 Vector<Scalar, 2> rotate90(const Vector<Scalar, 2>& src) {

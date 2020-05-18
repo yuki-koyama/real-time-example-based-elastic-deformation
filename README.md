@@ -24,7 +24,7 @@ Implemented by Kenshi Takayama and Yuki Koyama, and currently maintained by Yuki
 [http://koyama.xyz/project/ExampleBasedShapeMatching/](http://koyama.xyz/project/ExampleBasedShapeMatching/)
 
 # Note #
-* The source codes (except for third party ones) are licensed under the MIT license.
+* The source codes (except for third party ones under `include` and `lib`) are licensed under the MIT license.
 * This implementation is slightly modified from the version of making the demos and recording the timings for the paper.
 * It is not widely tested.
 * This source code was written by using Xcode and Mac OS X with x86. Other environments are not supported. (But the source code is written in standard C++, so porting might not be so difficult.)
