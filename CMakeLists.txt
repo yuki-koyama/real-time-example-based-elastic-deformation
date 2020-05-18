@@ -14,22 +14,25 @@ file(GLOB headers ${CMAKE_CURRENT_SOURCE_DIR}/src/*.h)
 
 # This is not very elegant way...
 file(GLOB klib_sources ${CMAKE_CURRENT_SOURCE_DIR}/include/KLIB/*.cpp)
-file(GLOB at_sources ${CMAKE_CURRENT_SOURCE_DIR}/external/AntTweakBar/src/*.cpp ${CMAKE_CURRENT_SOURCE_DIR}/external/AntTweakBar/src/*.h)
 
-add_executable(app ${sources} ${headers} ${klib_sources} ${at_sources})
+add_executable(app ${sources} ${headers} ${klib_sources})
 target_include_directories(app PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include ${CMAKE_CURRENT_SOURCE_DIR}/external/AntTweakBar/include)
-target_compile_definitions(app PRIVATE _MACOSX)
-target_compile_options(app PUBLIC -ObjC++)
 target_link_libraries(app
   ${CMAKE_CURRENT_SOURCE_DIR}/lib/libtet.a
-  ${CMAKE_CURRENT_SOURCE_DIR}/lib/libAntTweakBar.dylib
   OpenMeshCore
   ${CMAKE_CURRENT_SOURCE_DIR}/lib/libGLEW.a
   ${CMAKE_CURRENT_SOURCE_DIR}/lib/libGLEWmx.a
+  ${CMAKE_CURRENT_SOURCE_DIR}/external/AntTweakBar/lib/libAntTweakBar.a
   "-framework GLUT"
   "-framework OpenGL"
+  "-framework AppKit"
 )
-add_custom_command(TARGET app PRE_BUILD COMMAND make -f ${CMAKE_CURRENT_SOURCE_DIR}/external/AntTweakBar/src/Makefile.osx)
+
+# Bug fixing in AntTweakBar
+# sed -e 's/GLchar\* \*string/GLchar\* const \*string/' ${CMAKE_CURRENT_SOURCE_DIR}/external/AntTweakBar/src/LoadOGLCore.h
+# sed -e 's/GLvoid\* \*indices/GLvoid\* const \*indices/' ${CMAKE_CURRENT_SOURCE_DIR}/external/AntTweakBar/src/LoadOGLCore.h
+
+add_custom_command(TARGET app PRE_BUILD COMMAND make -C ${CMAKE_CURRENT_SOURCE_DIR}/external/AntTweakBar/src -f ${CMAKE_CURRENT_SOURCE_DIR}/external/AntTweakBar/src/Makefile.osx)
 add_custom_command(TARGET app POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_CURRENT_SOURCE_DIR}/shaders $<TARGET_FILE_DIR:app>/shaders)
-add_custom_command(TARGET app POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_CURRENT_SOURCE_DIR}/data $<TARGET_FILE_DIR:app>/data)
+add_custom_command(TARGET app POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_CURRENT_SOURCE_DIR}/data $<TARGET_FILE_DIR:app>)
 add_custom_command(TARGET app POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_CURRENT_SOURCE_DIR}/lib/*.dylib $<TARGET_FILE_DIR:app>/)
