@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,16 +15,16 @@
 		6B083CDA161028BE007C7271 /* libGLEWmx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B083CD7161028BE007C7271 /* libGLEWmx.a */; };
 		6B083CDD16102912007C7271 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B083CDB16102912007C7271 /* GLUT.framework */; };
 		6B083CDE16102912007C7271 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B083CDC16102912007C7271 /* OpenGL.framework */; };
-		6B083CE01610293E007C7271 /* libAntTweakBar.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6B083CD1161028B6007C7271 /* libAntTweakBar.dylib */; };
-		6B083CE11610293E007C7271 /* libOpenMeshCore.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6B083CD2161028B6007C7271 /* libOpenMeshCore.dylib */; };
-		6B083CE21610293E007C7271 /* TriMesh.fs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6BBD919916101F4700BC5A69 /* TriMesh.fs */; };
-		6B083CE31610293E007C7271 /* TriMesh.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6BBD919A16101F4700BC5A69 /* TriMesh.vs */; };
-		6B083CE41610293E007C7271 /* Wall.fs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6BBD919B16101F4700BC5A69 /* Wall.fs */; };
-		6B083CE51610293E007C7271 /* Wall.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6BBD919C16101F4700BC5A69 /* Wall.vs */; };
-		6B083CE61610293E007C7271 /* WallShadow.fs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6BBD919D16101F4700BC5A69 /* WallShadow.fs */; };
-		6B083CE71610293E007C7271 /* WallShadow.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6BBD919E16101F4700BC5A69 /* WallShadow.vs */; };
-		6B083CEB16102A4E007C7271 /* box in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6B083CE916102A19007C7271 /* box */; };
-		6B083CFD161031C1007C7271 /* demo.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6B083CFB161031B3007C7271 /* demo.xml */; };
+		6B083CE01610293E007C7271 /* libAntTweakBar.dylib in Copy Files */ = {isa = PBXBuildFile; fileRef = 6B083CD1161028B6007C7271 /* libAntTweakBar.dylib */; };
+		6B083CE11610293E007C7271 /* libOpenMeshCore.dylib in Copy Files */ = {isa = PBXBuildFile; fileRef = 6B083CD2161028B6007C7271 /* libOpenMeshCore.dylib */; };
+		6B083CE21610293E007C7271 /* TriMesh.fs in Copy Files */ = {isa = PBXBuildFile; fileRef = 6BBD919916101F4700BC5A69 /* TriMesh.fs */; };
+		6B083CE31610293E007C7271 /* TriMesh.vs in Copy Files */ = {isa = PBXBuildFile; fileRef = 6BBD919A16101F4700BC5A69 /* TriMesh.vs */; };
+		6B083CE41610293E007C7271 /* Wall.fs in Copy Files */ = {isa = PBXBuildFile; fileRef = 6BBD919B16101F4700BC5A69 /* Wall.fs */; };
+		6B083CE51610293E007C7271 /* Wall.vs in Copy Files */ = {isa = PBXBuildFile; fileRef = 6BBD919C16101F4700BC5A69 /* Wall.vs */; };
+		6B083CE61610293E007C7271 /* WallShadow.fs in Copy Files */ = {isa = PBXBuildFile; fileRef = 6BBD919D16101F4700BC5A69 /* WallShadow.fs */; };
+		6B083CE71610293E007C7271 /* WallShadow.vs in Copy Files */ = {isa = PBXBuildFile; fileRef = 6BBD919E16101F4700BC5A69 /* WallShadow.vs */; };
+		6B083CEB16102A4E007C7271 /* box in Copy Files */ = {isa = PBXBuildFile; fileRef = 6B083CE916102A19007C7271 /* box */; };
+		6B083CFD161031C1007C7271 /* demo.xml in Copy Files */ = {isa = PBXBuildFile; fileRef = 6B083CFB161031B3007C7271 /* demo.xml */; };
 		6BBD917B16101BB200BC5A69 /* Config.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6BBD915716101B9100BC5A69 /* Config.cpp */; };
 		6BBD917C16101BB200BC5A69 /* CGObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6BBD915916101B9100BC5A69 /* CGObject.cpp */; };
 		6BBD917D16101BB200BC5A69 /* Constraint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6BBD915B16101B9100BC5A69 /* Constraint.cpp */; };
@@ -50,23 +50,24 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		6BBD913E16101B5100BC5A69 /* CopyFiles */ = {
+		6BBD913E16101B5100BC5A69 /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 12;
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				6B083CEB16102A4E007C7271 /* box in CopyFiles */,
-				6B083CFD161031C1007C7271 /* demo.xml in CopyFiles */,
-				6B083CE01610293E007C7271 /* libAntTweakBar.dylib in CopyFiles */,
-				6B083CE11610293E007C7271 /* libOpenMeshCore.dylib in CopyFiles */,
-				6B083CE21610293E007C7271 /* TriMesh.fs in CopyFiles */,
-				6B083CE31610293E007C7271 /* TriMesh.vs in CopyFiles */,
-				6B083CE41610293E007C7271 /* Wall.fs in CopyFiles */,
-				6B083CE51610293E007C7271 /* Wall.vs in CopyFiles */,
-				6B083CE61610293E007C7271 /* WallShadow.fs in CopyFiles */,
-				6B083CE71610293E007C7271 /* WallShadow.vs in CopyFiles */,
+				6B083CEB16102A4E007C7271 /* box in Copy Files */,
+				6B083CFD161031C1007C7271 /* demo.xml in Copy Files */,
+				6B083CE01610293E007C7271 /* libAntTweakBar.dylib in Copy Files */,
+				6B083CE11610293E007C7271 /* libOpenMeshCore.dylib in Copy Files */,
+				6B083CE21610293E007C7271 /* TriMesh.fs in Copy Files */,
+				6B083CE31610293E007C7271 /* TriMesh.vs in Copy Files */,
+				6B083CE41610293E007C7271 /* Wall.fs in Copy Files */,
+				6B083CE51610293E007C7271 /* Wall.vs in Copy Files */,
+				6B083CE61610293E007C7271 /* WallShadow.fs in Copy Files */,
+				6B083CE71610293E007C7271 /* WallShadow.vs in Copy Files */,
 			);
+			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -341,7 +342,7 @@
 			buildPhases = (
 				6BBD913C16101B5100BC5A69 /* Sources */,
 				6BBD913D16101B5100BC5A69 /* Frameworks */,
-				6BBD913E16101B5100BC5A69 /* CopyFiles */,
+				6BBD913E16101B5100BC5A69 /* Copy Files */,
 			);
 			buildRules = (
 			);
@@ -358,14 +359,15 @@
 		6BBD913716101B5100BC5A69 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1140;
 			};
 			buildConfigurationList = 6BBD913A16101B5100BC5A69 /* Build configuration list for PBXProject "Real-Time_Example-Based_Elastic_Deformation" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 6BBD913516101B5100BC5A69;
 			productRefGroup = 6BBD914116101B5100BC5A69 /* Products */;
@@ -414,94 +416,24 @@
 		6BBD914816101B5100BC5A69 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/include\"";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/include\"";
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/lib\"";
 			};
 			name = Debug;
 		};
 		6BBD914916101B5100BC5A69 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				SDKROOT = macosx;
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/include\"";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/include\"";
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/lib\"";
 			};
 			name = Release;
 		};
 		6BBD914B16101B5100BC5A69 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)\"/**",
-				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -509,10 +441,6 @@
 		6BBD914C16101B5100BC5A69 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)\"/**",
-				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
