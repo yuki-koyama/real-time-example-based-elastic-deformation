@@ -1,12 +1,6 @@
 ## !! Important Notice !! ##
 
-This repository has not been maintained for long time and should have many build issues with recent environments. We are aware that this repository should
-
-- Use CMake (or other alternatives) to manage the project (instead of using Xcode, which is only for macOS and generates many compatibility issues),
-- Use pointers to external libraries (instead of using pre-compiled binaries, which cause many environemental issues), and
-- Update/reduce external dependencies.
-
-Unfortunately, we do not have enough time for updating this repository for now; pull requests are welcome.
+This repository has not been maintained for long time and should have many build & runtime issues with recent environments. Unfortunately, we do not have enough time for updating this repository for now; pull requests are welcome.
 
 ---
 
@@ -24,16 +18,29 @@ Implemented by Kenshi Takayama and Yuki Koyama, and currently maintained by Yuki
 [http://koyama.xyz/project/ExampleBasedShapeMatching/](http://koyama.xyz/project/ExampleBasedShapeMatching/)
 
 # Note #
-* The source codes (except for third party ones under `include` and `lib`) are licensed under the MIT license.
+* The source codes (except for third party ones under `include`, `lib`, and `external`) are licensed under the MIT license.
 * This implementation is slightly modified from the version of making the demos and recording the timings for the paper.
 * It is not widely tested.
 * This source code was written by using Xcode and Mac OS X with x86. Other environments are not supported. (But the source code is written in standard C++, so porting might not be so difficult.)
-* If you want to build and use it on other OS, please achieve it by yourself.
+* If you want to build and use it on other OS, please achieve it by yourself. (PR welcome)
 
-# How to Build #
-This source code can be built using Xcode (tested on Xcode 4.3.2, 6.1.1, and 9.0.1).
+# How to Build (macOS) #
+Before building the app, OpenMesh is required to be install:
+```
+brew install open-mesh
+```
+Then, the app can be built using CMake on macOS.
+```
+mkdir build
+cd build
+cmake ../
+make
+```
 
-`Real-Time_Example-Based_Elastic_Deformation.xcodeproj` is the project file for Xcode.
+Then run the app:
+```
+./app
+```
 
 # How to Use #
 Please see this example of use:
