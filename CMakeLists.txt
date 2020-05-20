@@ -27,9 +27,10 @@ file(GLOB headers ${CMAKE_CURRENT_SOURCE_DIR}/src/*.h)
 
 # This is not very elegant way to include external libraries...
 file(GLOB klib_sources ${CMAKE_CURRENT_SOURCE_DIR}/include/KLIB/*.cpp)
+file(GLOB tinyxml_sources ${CMAKE_CURRENT_SOURCE_DIR}/external/tinyxml/src/*.cpp)
 
-add_executable(app ${sources} ${headers} ${klib_sources})
-target_include_directories(app PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include ${CMAKE_CURRENT_SOURCE_DIR}/external/AntTweakBar/include)
+add_executable(app ${sources} ${headers} ${klib_sources} ${tinyxml_sources})
+target_include_directories(app PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include ${CMAKE_CURRENT_SOURCE_DIR}/external/AntTweakBar/include ${CMAKE_CURRENT_SOURCE_DIR}/external/tinyxml/include)
 target_link_libraries(app
   OpenMeshCore
   Eigen3::Eigen
