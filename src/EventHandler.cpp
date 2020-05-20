@@ -9,8 +9,11 @@ namespace
 } // namespace
 
 EventHandler::EventHandler() : m_dragMode(DRAGMODE_NONE), m_currentConstraintID(-1) {}
-void EventHandler::glut_mouse(int button, int state, int x, int y)
+void EventHandler::glut_mouse(int button, int state, int x, int y, int display_scale)
 {
+    x *= display_scale;
+    y *= display_scale;
+
     if (TwEventMouseButtonGLUT(button, state, x, y)) return;
     int  y2        = core.m_drawer.m_height - y;
     bool flagShift = (glutGetModifiers() & GLUT_ACTIVE_SHIFT) != 0;
@@ -272,8 +275,11 @@ void EventHandler::glut_mouse(int button, int state, int x, int y)
         }
     }
 }
-void EventHandler::glut_motion(int x, int y)
+void EventHandler::glut_motion(int x, int y, int display_scale)
 {
+    x *= display_scale;
+    y *= display_scale;
+
     if (TwEventMouseMotionGLUT(x, y)) return;
     int y2 = core.m_drawer.m_height - y;
     core.m_drawer.m_trackball.mouseMove(x, y);

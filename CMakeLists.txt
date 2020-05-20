@@ -7,12 +7,15 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 set(CMAKE_BUILD_TYPE Release)
 
+# This should be set OFF if this app is built for non-retina displays
+option(BUILD_FOR_RETINA_DISPLAY "Build for retina display (e.g., recent MacBook)" ON)
+
 find_package(OpenMesh REQUIRED)
 
 file(GLOB sources ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp)
 file(GLOB headers ${CMAKE_CURRENT_SOURCE_DIR}/src/*.h)
 
-# This is not very elegant way...
+# This is not very elegant way to include external libraries...
 file(GLOB klib_sources ${CMAKE_CURRENT_SOURCE_DIR}/include/KLIB/*.cpp)
 
 add_executable(app ${sources} ${headers} ${klib_sources})
@@ -27,8 +30,11 @@ target_link_libraries(app
   "-framework OpenGL"
   "-framework AppKit"
 )
+if(BUILD_FOR_RETINA_DISPLAY)
+	target_compile_definitions(app PRIVATE BUILD_FOR_RETINA_DISPLAY)
+endif()
 
-# Bug fixing in AntTweakBar
+# Bug fixing in AntTweakBar for macOS
 # sed -e 's/GLchar\* \*string/GLchar\* const \*string/' ${CMAKE_CURRENT_SOURCE_DIR}/external/AntTweakBar/src/LoadOGLCore.h
 # sed -e 's/GLvoid\* \*indices/GLvoid\* const \*indices/' ${CMAKE_CURRENT_SOURCE_DIR}/external/AntTweakBar/src/LoadOGLCore.h
 

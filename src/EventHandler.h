@@ -16,8 +16,8 @@ struct EventHandler
     Y::Vector2d m_manipulate_prevPos;
     int         m_currentConstraintID;
     EventHandler();
-    void glut_mouse(int button, int state, int x, int y);
-    void glut_motion(int x, int y);
+    void glut_mouse(int button, int state, int x, int y, int display_scale);
+    void glut_motion(int x, int y, int display_scale);
     void glut_keyboard(unsigned char key, int x, int y);
     void glut_special(int key, int x, int y);
 };

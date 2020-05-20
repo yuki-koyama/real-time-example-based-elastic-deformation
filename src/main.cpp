@@ -27,6 +27,12 @@ namespace
     clock_t      clk_start; // for FPS measure
     clock_t      clk_perTimeStep;
     bool         didSimulation;
+
+#ifdef BUILD_FOR_RETINA_DISPLAY
+    constexpr int display_scale = 2;
+#else
+    constexpr int display_scale = 1;
+#endif
 } // namespace
 
 void glut_display(void)
@@ -56,8 +62,8 @@ void glut_display(void)
 
 void glut_reshape(int width, int height)
 {
-    core.m_drawer.reshape(width, height);
-    TwWindowSize(width, height);
+    core.m_drawer.reshape(display_scale * width, display_scale * height);
+    TwWindowSize(display_scale * width, display_scale * height);
 }
 
 void glut_idle(void)
@@ -79,11 +85,11 @@ void glut_idle(void)
 
 void glut_mouse(int button, int state, int x, int y)
 {
-    core.m_eventHandler.glut_mouse(button, state, x, y);
+    core.m_eventHandler.glut_mouse(button, state, x, y, display_scale);
 }
 void glut_motion(int x, int y)
 {
-    core.m_eventHandler.glut_motion(x, y);
+    core.m_eventHandler.glut_motion(x, y, display_scale);
 }
 void glut_keyboard(unsigned char key, int x, int y)
 {
