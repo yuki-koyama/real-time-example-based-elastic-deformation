@@ -2,7 +2,7 @@
 
 #include "Particle.h"
 #include "Vector.h"
-#include <KLIB/MatrixVL.h>
+#include <Eigen/Core>
 
 class ShapeMatchingObject;
 
@@ -24,7 +24,7 @@ public:
     std::vector<Y::Vector6f> Umode;
     Y::Matrix3x3f            Ustatic;
     int                      id;
-    KLIB::MatrixVLd          AtA_inv; // projection matrix for local examples
+    Eigen::MatrixXd          AtA_inv; // projection matrix for local examples
 
     Cluster();
     ~Cluster();

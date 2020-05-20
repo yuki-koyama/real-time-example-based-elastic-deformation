@@ -6,7 +6,7 @@
 #include "TetMesh.h"
 #include "TriMesh.h"
 #include "tinyxml.h"
-#include <KLIB/MatrixVL.h>
+#include <Eigen/Core>
 #include <string>
 #include <time.h>
 #include <vector>
@@ -77,7 +77,7 @@ public:
     // given n example poses, A := (E_1 - E_n, ..., E_{n-1} - E_n), where E_i is i-th example pose's deformation
     // descriptor (similar to [Martin11]) e.g., when numberOfModes is 3, AtA_inv is a 2 by 2 matrix
 
-    KLIB::MatrixVLd AtA_inv;
+    Eigen::MatrixXd AtA_inv;
     // note: in the paper, AtA_inv is described as (LtL)^(-1)
 
     bool saveNode(const std::string& node_fname) const;

@@ -10,7 +10,17 @@ set(CMAKE_BUILD_TYPE Release)
 # This should be set OFF if this app is built for non-retina displays
 option(BUILD_FOR_RETINA_DISPLAY "Build for retina display (e.g., recent MacBook)" ON)
 
+# External dependency: OpenMesh
 find_package(OpenMesh REQUIRED)
+
+# External dependency: Eigen3
+find_package(Eigen3 REQUIRED)
+if((NOT TARGET Eigen3::Eigen) AND (DEFINED EIGEN3_INCLUDE_DIR))
+	# Eigen 3.0, 3.1, 3.2 do not provide the target named Eigen3::Eigen
+	add_library(AliasEigen3 INTERFACE)
+	target_include_directories(AliasEigen3 INTERFACE ${EIGEN3_INCLUDE_DIR})
+	add_library(Eigen3::Eigen ALIAS AliasEigen3)
+endif()
 
 file(GLOB sources ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp)
 file(GLOB headers ${CMAKE_CURRENT_SOURCE_DIR}/src/*.h)
@@ -22,6 +32,7 @@ add_executable(app ${sources} ${headers} ${klib_sources})
 target_include_directories(app PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include ${CMAKE_CURRENT_SOURCE_DIR}/external/AntTweakBar/include)
 target_link_libraries(app
   OpenMeshCore
+  Eigen3::Eigen
   ${CMAKE_CURRENT_SOURCE_DIR}/lib/libtet.a
   ${CMAKE_CURRENT_SOURCE_DIR}/lib/libGLEW.a
   ${CMAKE_CURRENT_SOURCE_DIR}/lib/libGLEWmx.a

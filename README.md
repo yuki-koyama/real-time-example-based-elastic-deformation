@@ -24,10 +24,10 @@ Implemented by Kenshi Takayama and Yuki Koyama, and currently maintained by Yuki
 * This source code was written by using Xcode and Mac OS X with x86. Other environments are not supported. (But the source code is written in standard C++, so porting might not be so difficult.)
 * If you want to build and use it on other OS, please achieve it by yourself. (PR welcome)
 
-# How to Build (macOS) #
-Before building the app, OpenMesh is required to be install:
+# Build and Run (macOS) #
+Before building the app, OpenMesh and Eigen need to be install:
 ```
-brew install open-mesh
+brew install open-mesh eigen
 ```
 Then, the app can be built using CMake on macOS.
 ```

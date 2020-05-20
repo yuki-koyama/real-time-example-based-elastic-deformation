@@ -11,6 +11,7 @@
 #include "invSqrt.h"
 #include "jacobi.h"
 #include "params.h"
+#include <Eigen/LU>
 #include <KLIB/DrawUtil.h>
 #include <numeric>
 #include <tetgen.h>
@@ -882,7 +883,7 @@ void ShapeMatchingObject::calculateGoalPositions()
     m_performance.m_clkStart->setCurrentIndex(2); // measure t_proj
     if (1 < n && core.m_gui.m_author.m_example_use && !m_config.m_useLocalExample)
     {
-        KLIB::VectorVLd weight_global_tmp(n - 1, 0.0);
+        Eigen::VectorXd weight_global_tmp = Eigen::VectorXd::Zero(n - 1);
         for (vector<Cluster>::iterator c = clusters.begin(); c != clusters.end(); ++c)
         {
             const Y::Vector6f& Umode_back = c->Umode.back();
@@ -933,9 +934,9 @@ void ShapeMatchingObject::calculateGoalPositions()
             if (m_config.m_useLocalExample)
             {
                 vector<double>     weight_local(n, 1);
-                KLIB::VectorVLd    weight_local_tmp(n - 1, 0.0);
-                const Y::Vector6f& Umode_back = c->Umode.back();
-                Y::Vector6f        tmp        = c->U - Umode_back;
+                Eigen::VectorXd    weight_local_tmp = Eigen::VectorXd::Zero(n - 1);
+                const Y::Vector6f& Umode_back       = c->Umode.back();
+                Y::Vector6f        tmp              = c->U - Umode_back;
                 for (int i = 0; i < n - 1; ++i)
                 {
                     weight_local_tmp[i] = (c->Umode[i] - Umode_back).dot_product(tmp);
@@ -1121,10 +1122,10 @@ void ShapeMatchingObject::precomputeExamples_AtA()
     int n = numberOfModes - 1;
     if (0 < n)
     {
-        KLIB::MatrixVLd AtA_global(n, n);
+        Eigen::MatrixXd AtA_global(n, n);
         for (vector<Cluster>::iterator c = clusters.begin(); c != clusters.end(); ++c)
         {
-            KLIB::MatrixVLd AtA_local(n, n);
+            Eigen::MatrixXd AtA_local(n, n);
             for (int i = 0; i < n; ++i)
             {
                 Y::Vector6f Umode_i = c->Umode[i] - c->Umode.back();
@@ -1139,9 +1140,9 @@ void ShapeMatchingObject::precomputeExamples_AtA()
             AtA_global += AtA_local;
             for (int i = 0; i < n; ++i)
                 AtA_local(i, i) += 0.00001;
-            c->AtA_inv = AtA_local.invert();
+            c->AtA_inv = AtA_local.inverse();
         }
-        AtA_inv = AtA_global.invert();
+        AtA_inv = AtA_global.inverse();
     }
 }
 
