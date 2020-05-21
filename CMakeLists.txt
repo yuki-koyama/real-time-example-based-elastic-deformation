@@ -22,6 +22,10 @@ if((NOT TARGET Eigen3::Eigen) AND (DEFINED EIGEN3_INCLUDE_DIR))
 	add_library(Eigen3::Eigen ALIAS AliasEigen3)
 endif()
 
+# Dependency: TetGen
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/external/tetgen)
+target_include_directories(tetgen PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/external/tetgen) # This is not elegant
+
 file(GLOB sources ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp)
 file(GLOB headers ${CMAKE_CURRENT_SOURCE_DIR}/src/*.h)
 
@@ -34,7 +38,7 @@ target_include_directories(app PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include ${CMAK
 target_link_libraries(app
   OpenMeshCore
   Eigen3::Eigen
-  ${CMAKE_CURRENT_SOURCE_DIR}/lib/libtet.a
+  tetgen
   ${CMAKE_CURRENT_SOURCE_DIR}/lib/libGLEW.a
   ${CMAKE_CURRENT_SOURCE_DIR}/lib/libGLEWmx.a
   ${CMAKE_CURRENT_SOURCE_DIR}/external/AntTweakBar/lib/libAntTweakBar.a

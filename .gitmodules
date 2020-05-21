@@ -1,0 +1,3 @@
+[submodule "external/tetgen"]
+	path = external/tetgen
+	url = https://github.com/libigl/tetgen.git

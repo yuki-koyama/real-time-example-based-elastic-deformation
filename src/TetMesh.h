@@ -37,11 +37,15 @@ struct TetMesh
         vertices_.clear();
         tetras_.clear();
     }
-    bool load(const std::string& filename_base); // filename without file extension
-    void init(const tetgenio& in);
-    void calc_neighbor();
-    void remove_unused_vertices();
-    bool empty() const { return vertices_.empty(); }
+
     TetMesh() {}
     TetMesh(const std::string& filename_base) { load(filename_base); }
+
+    bool load(const std::string& filename_base); // filename without file extension
+    bool empty() const { return vertices_.empty(); }
+    void init(const tetgenio& in);
+
+private:
+    void calc_neighbor();
+    void remove_unused_vertices();
 };

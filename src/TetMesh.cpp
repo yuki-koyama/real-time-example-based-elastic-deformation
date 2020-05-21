@@ -9,10 +9,15 @@ using namespace std;
 bool TetMesh::load(const string& filename_base)
 {
     tetgenio in;
-    if (!in.load_tetmesh(const_cast<char*>(filename_base.c_str()))) return false;
+    if (!in.load_tetmesh(const_cast<char*>(filename_base.c_str()), tetgenbehavior::NODES))
+    {
+        return false;
+    }
     init(in);
+
     return true;
 }
+
 void TetMesh::init(const tetgenio& in)
 {
     vertices_.resize(in.numberofpoints);
@@ -34,6 +39,7 @@ void TetMesh::init(const tetgenio& in)
     unused_indices_.clear();
     remove_unused_vertices();
 }
+
 void TetMesh::remove_unused_vertices()
 {
     size_t n         = vertices_.size();
