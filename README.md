@@ -26,7 +26,7 @@ The original app was implemented by Kenshi Takayama and Yuki Koyama, and is curr
 
 ## Notes
 
-- The source codes (except for the third party ones under `include`, `lib`, and `external`) are licensed under ~MIT license~ __GPLv3 License__.
+- The source codes (except for the third party ones under `include`, `lib`, and `external`) are licensed under GPLv3 License; see `LICENSE`.
 - This implementation is slightly modified from the version of making the demos and recording the timings for the paper.
 - It is not widely tested.
 - It is written only for macOS. Other environments are not supported.
