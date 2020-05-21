@@ -24,7 +24,7 @@ The original app was implemented by Kenshi Takayama and Yuki Koyama, and is curr
 
 ## Notes
 
-- The source codes (except for third party ones under `include`, `lib`, and `external`) are licensed under the MIT license.
+- The source codes (except for the third party ones under `include`, `lib`, and `external`) are licensed under ~MIT license~ __GPLv3 License__.
 - This implementation is slightly modified from the version of making the demos and recording the timings for the paper.
 - It is not widely tested.
 - It is written only for macOS. Other environments are not supported.
@@ -32,13 +32,14 @@ The original app was implemented by Kenshi Takayama and Yuki Koyama, and is curr
 
 ## Third Parties
 
-- Eigen
-- OpenMesh
-- tinyxml
-- tetgen
-- AntTweakBar
-- GLUT
-- GLEW
+- Eigen (`brew install eigen`; tested with v3.3.7)
+- OpenMesh (`brew install open-mesh`; tested with v8.1)
+- tetgen (v1.5.1 is included as a git submodule)
+- tinyxml (directly included)
+- AntTweakBar (directly included)
+- GLEW (directly included)
+- OpenGL (`-framework OpenGL`)
+- GLUT (`-framework GLUT`)
 
 ## Build and Run (macOS)
 
