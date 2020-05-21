@@ -12,6 +12,8 @@ This repository provides an implementation of the paper:
 
 > Yuki Koyama, Kenshi Takayama, Nobuyuki Umetani, and Takeo Igarashi. 2012. Real-time example-based elastic deformation. In Proceedings of the ACM SIGGRAPH/Eurographics Symposium on Computer Animation (SCA '12). Eurographics Association, Aire-la-Ville, Switzerland, Switzerland, 19-24.
 
+![](./docs/teaser-s.png)
+
 ## Developers
 
 The original app was implemented by Kenshi Takayama and Yuki Koyama, and is currently maintained by Yuki Koyama.
